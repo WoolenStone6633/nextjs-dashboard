@@ -11,10 +11,11 @@ import {
 import { Button } from '@/app/ui/button';
 import { createInvoice, State } from '@/app/lib/actions';
 import { useActionState } from 'react';
+import { useFormState } from 'react-dom';
 
 export default function Form({ customers }: { customers: CustomerField[] }) {
   const initialState: State = { message: null, errors: {}}
-  const [state, formAction] = useActionState(createInvoice, initialState)
+  const [state, formAction] = useFormState(createInvoice, initialState) //useActionState did not work so I changed it to useFormState
 
   return (
     <form action={formAction} id="form-error">

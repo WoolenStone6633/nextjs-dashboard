@@ -3,6 +3,11 @@ import Search from '@/app/ui/search';
 import { lusitana } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { CustomersTableSkeleton, TableCustRowSkeleton } from '@/app/ui/skeletons';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Customers',
+};
 
 export default function Page({ searchParams }: { searchParams?: { query?: string; };}) {
   const query = searchParams?.query || ''
