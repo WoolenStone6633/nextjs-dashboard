@@ -29,5 +29,6 @@ export default async function Page({searchParams,}: {searchParams?: { query?: st
         <Pagination totalPages={totalPages} />
       </div>
     </div>
+    // <InvoicesTableSkeleton />
   );
 }
